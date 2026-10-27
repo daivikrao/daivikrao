@@ -1,33 +1,19 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=Hey,%20I'm%20Daivik%20👋&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38" width="100%"/>
+<img src="https://raw.githubusercontent.com/daivikrao/daivikrao/main/assets/status.svg?v=0-init" width="100%" alt="systemctl status daivik.service — Daivik, CS grad student at Texas A&M, ex-Software Engineer at Fidelity Investments"/>
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=CS+Grad+Student+%40+Texas+A%26M;Ex-Software+Engineer+%40+Fidelity+Investments;I+love+building+products+%F0%9F%9A%80;%23juniordevforlife+%3A)" alt="Typing SVG" /></a>
+<a href="https://github.com/daivikrao/daivikrao/issues/new?title=ping&body=%F0%9F%91%8B%20Just%20hit%20**Create**%20%E2%80%94%20a%20GitHub%20Action%20takes%20it%20from%20here."><img src="https://img.shields.io/badge/ping-daivik.service-3fb950?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=161b22" alt="Ping daivik.service"/></a>
 
-<p>
-  <img src="https://komarev.com/ghpvc/?username=daivikrao&color=36BCF7&style=flat-square&label=Profile+Views" />
-  <img src="https://img.shields.io/badge/Open%20to-Summer%202027%20Internships-2ea44f?style=flat-square" />
-</p>
+<sub>Click the button, then hit <b>Create</b>. A GitHub Action logs your ping in the terminal above and replies to you within a minute.</sub>
 
 </div>
-
----
-
-### 🧑‍💻 About Me
-
-- 🎓 Pursuing a **Master of Computer Science** at **Texas A&M University** (2026 – 2028)
-- 💼 Spent **3 years as a Software Engineer at Fidelity Investments**, building and shipping production software
-- 🏫 B.E. in Information Science & Engineering from **B.M.S. College of Engineering**, Bangalore
-- 🌱 Currently sharpening my DSA game one NeetCode problem at a time
-- 🔭 Looking for **Summer 2027 internships** in software, platform, and production engineering
-- 📍 College Station, TX (originally from Bangalore)
 
 ---
 
 ### 🛠️ Tech Stack
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,java,js,react,html,css,php,mysql,git,github,linux,vscode&perline=12" />
+  <img src="https://skillicons.dev/icons?i=python,java,cpp,js,react,html,css,php,mysql,git,github,linux,vscode&perline=13" />
 </p>
 
 ---
@@ -49,8 +35,25 @@
 
 ---
 
-<div align="center">
-  <i>Thanks for stopping by — always happy to chat about building cool things! ⚡</i>
-</div>
+<details>
+<summary><b>⚙️ How the ping works</b></summary>
+<br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=110&section=footer" width="100%"/>
+Every ping is a tiny event-driven pipeline, built entirely on GitHub:
+
+```mermaid
+flowchart LR
+    A["👋 You open an issue<br/>titled 'ping'"] --> B["⚡ GitHub Action<br/>(issues: opened)"]
+    B --> C["🐍 ping.py record<br/>dedupes + logs to pings.json"]
+    C --> D["🎨 ping.py render<br/>re-draws status.svg"]
+    D --> E["📦 commit + push<br/>busts image cache"]
+    E --> F["💬 replies 200 OK<br/>and closes the issue"]
+```
+
+- **Rate limiting:** pinging again within 30 minutes gets a friendly `429` instead of a duplicate log entry.
+- **Safe by design:** only your GitHub username is shown, never free text from the issue.
+- **Concurrency:** runs are serialized so simultaneous pings never clobber each other.
+
+Source: [`ping.yml`](.github/workflows/ping.yml) · [`ping.py`](scripts/ping.py)
+
+</details>
