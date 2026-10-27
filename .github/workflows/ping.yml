@@ -1,0 +1,58 @@
+name: ping daivik.service
+
+# A visitor opens an issue titled "ping" → this workflow logs the ping,
+# re-renders the terminal card on the profile, replies, and closes the issue.
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch: # re-render manually
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ping
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'ping')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Record ping
+        if: github.event_name == 'issues'
+        env:
+          PING_USER: ${{ github.event.issue.user.login }}
+          PING_AT: ${{ github.event.issue.created_at }}
+        run: python scripts/ping.py record
+
+      - name: Render terminal card
+        run: python scripts/ping.py render
+
+      - name: Commit
+        env:
+          PING_USER: ${{ github.event.issue.user.login }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/status.svg data/pings.json README.md
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "ping from @${PING_USER:-render}"
+          git pull --rebase
+          git push
+
+      - name: Reply and close
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$NUM" --repo "$GITHUB_REPOSITORY" --body-file reply.md
+          gh issue close "$NUM" --repo "$GITHUB_REPOSITORY" --reason completed
