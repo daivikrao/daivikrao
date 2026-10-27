@@ -31,7 +31,7 @@
 <text x="22" y="173"><tspan fill="#8b949e">     Status: </tspan><tspan fill="#e3b341">"Open to Summer 2027 internships: SWE · Platform · PE"</tspan></text>
 </g>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.10s" dur="0.2s" fill="freeze"/>
-<text x="22" y="194"><tspan fill="#8b949e">      Pings: </tspan><tspan fill="#d2a8ff">0 received</tspan><tspan fill="#8b949e"> · be the first! ↓</tspan></text>
+<text x="22" y="194"><tspan fill="#8b949e">      Pings: </tspan><tspan fill="#d2a8ff">1 received</tspan><tspan fill="#8b949e"> · last from @daivikrao</tspan></text>
 </g>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.37s" dur="0.01s" fill="freeze"/>
 <text x="22" y="236"><tspan fill="#3fb950" class="b">daivik@tamu</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#58a6ff" class="b">~</tspan><tspan fill="#c9d1d9">$ </tspan></text>
@@ -50,7 +50,7 @@
 <text x="22" y="320"><tspan fill="#8b949e">Aug 2026      </tspan><tspan fill="#58a6ff">daivik[1]: </tspan><tspan fill="#c9d1d9">forked to Texas A&amp;M: Master of Computer Science</tspan></text>
 </g>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="5.94s" dur="0.2s" fill="freeze"/>
-<text x="22" y="341"><tspan fill="#8b949e">now           </tspan><tspan fill="#58a6ff">daivik[1]: </tspan><tspan fill="#ffa657">listening for pings… hit the button below</tspan></text>
+<text x="22" y="341"><tspan fill="#8b949e">Oct 27 18:11  </tspan><tspan fill="#58a6ff">daivik[1]: </tspan><tspan fill="#c9d1d9">ping from </tspan><tspan fill="#d2a8ff">@daivikrao</tspan><tspan fill="#8b949e"> → </tspan><tspan fill="#3fb950" class="b">200 OK</tspan></text>
 </g>
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="6.21s" dur="0.01s" fill="freeze"/>
 <text x="22" y="383"><tspan fill="#3fb950" class="b">daivik@tamu</tspan><tspan fill="#c9d1d9">:</tspan><tspan fill="#58a6ff" class="b">~</tspan><tspan fill="#c9d1d9">$ </tspan></text>
